@@ -23,24 +23,27 @@ const CONFIG = {
 
 /* ---------------------------------------------------------
    Catálogo — agrega, quita o cambia productos y precios
-   cat: "canastas" | "frutas" | "verduras"
+   cat:  "canastas" | "frutas" | "verduras"
+   foto: id de la foto en Unsplash (images.unsplash.com/<foto>)
+   mix:  (solo canastas) productos cuyas fotos forman el mosaico;
+         el primero se muestra grande
    --------------------------------------------------------- */
 const PRODUCTOS = [
-  { id: "canasta-basica",   cat: "canastas", nombre: "Canasta Básica",   detalle: "Para 1–2 personas · 6 verduras y 3 frutas, aprox. 6 kg", precio: 12990, unidad: "un.", colores: ["#d94a38", "#7fb04a", "#f1c84b"], ancho: true },
-  { id: "canasta-familiar", cat: "canastas", nombre: "Canasta Familiar", detalle: "Para 3–5 personas · 10 verduras y 5 frutas, aprox. 12 kg", precio: 22990, unidad: "un.", colores: ["#e98a2f", "#c8333a", "#7fb04a", "#b7cc3f"], ancho: true, etiqueta: "Más pedida" },
+  { id: "canasta-basica",   cat: "canastas", nombre: "Canasta Básica",   detalle: "Para 1–2 personas · 6 verduras y 3 frutas, aprox. 6 kg", precio: 12990, unidad: "un.", colores: ["#d94a38"], ancho: true, mix: ["tomates", "lechuga", "zanahorias", "manzanas", "platanos"] },
+  { id: "canasta-familiar", cat: "canastas", nombre: "Canasta Familiar", detalle: "Para 3–5 personas · 10 verduras y 5 frutas, aprox. 12 kg", precio: 22990, unidad: "un.", colores: ["#e98a2f"], ancho: true, etiqueta: "Más pedida", mix: ["zanahorias", "paltas", "naranjas", "pimentones", "papas"] },
 
-  { id: "manzanas", cat: "frutas", nombre: "Manzanas", detalle: "Rojas, dulces y crujientes", precio: 1490, unidad: "kg", colores: ["#c8333a"] },
-  { id: "platanos", cat: "frutas", nombre: "Plátanos", detalle: "En su punto justo", precio: 1290, unidad: "kg", colores: ["#f1c84b"] },
-  { id: "naranjas", cat: "frutas", nombre: "Naranjas", detalle: "Ideales para jugo", precio: 1190, unidad: "kg", colores: ["#f39a2b"] },
-  { id: "limones",  cat: "frutas", nombre: "Limones",  detalle: "Jugosos y aromáticos", precio: 1590, unidad: "kg", colores: ["#d9d64a"] },
-  { id: "paltas",   cat: "frutas", nombre: "Paltas",   detalle: "Cremosas, listas para comer", precio: 4990, unidad: "kg", colores: ["#5c7a2e"] },
+  { id: "manzanas", cat: "frutas", nombre: "Manzanas", detalle: "Rojas, dulces y crujientes", precio: 1490, unidad: "kg", colores: ["#c8333a"], foto: "photo-1560806887-1e4cd0b6cbd6" },
+  { id: "platanos", cat: "frutas", nombre: "Plátanos", detalle: "En su punto justo", precio: 1290, unidad: "kg", colores: ["#f1c84b"], foto: "photo-1571771894821-ce9b6c11b08e" },
+  { id: "naranjas", cat: "frutas", nombre: "Naranjas", detalle: "Ideales para jugo", precio: 1190, unidad: "kg", colores: ["#f39a2b"], foto: "photo-1611080626919-7cf5a9dbab5b" },
+  { id: "limones",  cat: "frutas", nombre: "Limones",  detalle: "Jugosos y aromáticos", precio: 1590, unidad: "kg", colores: ["#d9d64a"], foto: "photo-1590502593747-42a996133562" },
+  { id: "paltas",   cat: "frutas", nombre: "Paltas",   detalle: "Cremosas, listas para comer", precio: 4990, unidad: "kg", colores: ["#5c7a2e"], foto: "photo-1523049673857-eb18f1d7b578" },
 
-  { id: "tomates",    cat: "verduras", nombre: "Tomates",    detalle: "Maduros y firmes", precio: 1690, unidad: "kg", colores: ["#d94a38"] },
-  { id: "lechuga",    cat: "verduras", nombre: "Lechuga",    detalle: "Fresca y crujiente", precio: 990, unidad: "un.", colores: ["#7fb04a"] },
-  { id: "zanahorias", cat: "verduras", nombre: "Zanahorias", detalle: "Dulces, de la temporada", precio: 990, unidad: "kg", colores: ["#e98a2f"] },
-  { id: "papas",      cat: "verduras", nombre: "Papas",      detalle: "Para cocer, freír u hornear", precio: 1190, unidad: "kg", colores: ["#c9a26b"] },
-  { id: "cebollas",   cat: "verduras", nombre: "Cebollas",   detalle: "Cebolla blanca de guarda", precio: 1090, unidad: "kg", colores: ["#d8b98f"] },
-  { id: "pimentones", cat: "verduras", nombre: "Pimentones", detalle: "Rojos y verdes", precio: 690, unidad: "un.", colores: ["#b8322a"] },
+  { id: "tomates",    cat: "verduras", nombre: "Tomates",    detalle: "Maduros y firmes", precio: 1690, unidad: "kg", colores: ["#d94a38"], foto: "photo-1582284540020-8acbe03f4924" },
+  { id: "lechuga",    cat: "verduras", nombre: "Lechuga",    detalle: "Fresca y crujiente", precio: 990, unidad: "un.", colores: ["#7fb04a"], foto: "photo-1640958904159-51ae08bd3412" },
+  { id: "zanahorias", cat: "verduras", nombre: "Zanahorias", detalle: "Dulces, de la temporada", precio: 990, unidad: "kg", colores: ["#e98a2f"], foto: "photo-1598170845058-32b9d6a5da37" },
+  { id: "papas",      cat: "verduras", nombre: "Papas",      detalle: "Para cocer, freír u hornear", precio: 1190, unidad: "kg", colores: ["#c9a26b"], foto: "photo-1518977676601-b53f82aba655" },
+  { id: "cebollas",   cat: "verduras", nombre: "Cebollas",   detalle: "Firmes y de buen calibre", precio: 1090, unidad: "kg", colores: ["#d8b98f"], foto: "photo-1757813027601-49030d3162ae" },
+  { id: "pimentones", cat: "verduras", nombre: "Pimentones", detalle: "De colores variados", precio: 690, unidad: "un.", colores: ["#b8322a"], foto: "photo-1563565375-f3fdfdbefa83" },
 ];
 
 /* ========================================================= */
@@ -80,8 +83,18 @@ const subtotal = () => cartLines().reduce((a, l) => a + l.total, 0);
 /* ---------- Catálogo ---------- */
 const grid = $("#productGrid");
 
-const swatch = (p) =>
-  `<div class="product__swatch" style="--c:${p.colores[0]}">${p.colores.map((c) => `<i style="--c:${c}"></i>`).join("")}</div>`;
+const fotoURL = (foto, w, h) =>
+  `https://images.unsplash.com/${foto}?auto=format&fit=crop&w=${w}&h=${h}&q=70`;
+
+const imgTag = (p, w, h) =>
+  `<img src="${fotoURL(p.foto, w, h)}" alt="${esc(p.nombre)}" width="${w}" height="${h}" loading="lazy" decoding="async">`;
+
+// Miniatura para el carrito: la foto del producto o, en canastas, la del primer producto del mix
+const thumb = (p) => imgTag(p.foto ? p : byId[p.mix[0]], 96, 96);
+
+const swatch = (p) => p.mix
+  ? `<div class="product__media product__media--mix" style="--c:${p.colores[0]}">${p.mix.map((id, i) => imgTag(byId[id], i ? 300 : 600, i ? 200 : 400)).join("")}</div>`
+  : `<div class="product__media" style="--c:${p.colores[0]}">${imgTag(p, 600, 450)}</div>`;
 
 grid.innerHTML = PRODUCTOS.map((p) => `
   <article class="product${p.ancho ? " product--wide" : ""}" data-id="${p.id}" data-cat="${p.cat}">
@@ -137,7 +150,7 @@ const emptyHTML = `
 function lineItemsHTML(editable) {
   return `<ul class="line-items">${cartLines().map((l) => `
     <li class="line-item">
-      <i style="--c:${l.colores[0]}"></i>
+      <span class="line-item__thumb">${thumb(l)}</span>
       <span class="line-item__name">${editable ? "" : `${l.qty} × `}${esc(l.nombre)}</span>
       <span class="line-item__total">${fmt(l.total)}</span>
       <span class="line-item__meta">${fmt(l.precio)} / ${l.unidad}</span>
