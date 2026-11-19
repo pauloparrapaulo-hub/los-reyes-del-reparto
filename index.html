@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Los reyes del reparto · Frutas y Verduras</title>
+  <meta name="description" content="Frutas y verduras frescas a domicilio. Arma tu carrito y agenda tu entrega con Los reyes del reparto.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Los reyes del reparto · Frutas y Verduras">
+  <meta property="og:description" content="Frutas y verduras frescas, directo a tu puerta. Arma tu pedido y agenda tu entrega.">
+  <meta name="theme-color" content="#1f5135">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%231f5135' d='M3 18h18l1-11-5 4-5-7-5 7-5-4z'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="brand" aria-label="Los reyes del reparto, inicio">
+        <svg class="brand__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h18l1-11-5 4-5-7-5 7-5-4z"/></svg>
+        <span class="brand__text">
+          <strong>Los reyes del reparto</strong>
+          <small>Frutas y Verduras</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#productos">Productos</a>
+        <button type="button" class="cart-btn" id="cartOpen" aria-label="Abrir carrito">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+          <span class="cart-btn__label">Carrito</span>
+          <span class="cart-btn__count" id="cartCount">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow">Reparto a domicilio</p>
+          <h1>Frutas y verduras frescas, directo a tu puerta.</h1>
+          <p class="lead">Arma tu carrito, agenda el día y la hora, y nosotros nos encargamos del resto. Productos seleccionados cada mañana.</p>
+          <div class="hero__actions">
+            <a href="#productos" class="btn btn--primary">Comprar ahora</a>
+            <a href="#como-funciona" class="btn btn--ghost">Cómo funciona</a>
+          </div>
+          <ul class="hero__facts">
+            <li><strong>Lun a Sáb</strong><span>días de reparto</span></li>
+            <li><strong>2 turnos</strong><span>mañana y tarde</span></li>
+            <li><strong>100%</strong><span>producto fresco</span></li>
+          </ul>
+        </div>
+
+        <aside class="ticket" aria-label="Ejemplo de canasta de la semana">
+          <div class="ticket__head">
+            <span>Canasta de la semana</span>
+            <span class="badge">De temporada</span>
+          </div>
+          <ul class="ticket__list">
+            <li><i style="--c:#d94a38"></i>Tomates<span>1 kg</span></li>
+            <li><i style="--c:#7fb04a"></i>Lechuga<span>1 un.</span></li>
+            <li><i style="--c:#e98a2f"></i>Zanahorias<span>1 kg</span></li>
+            <li><i style="--c:#c8333a"></i>Manzanas<span>1 kg</span></li>
+            <li><i style="--c:#f1c84b"></i>Plátanos<span>1 kg</span></li>
+            <li><i style="--c:#b7cc3f"></i>Limones<span>½ kg</span></li>
+          </ul>
+          <div class="ticket__foot">
+            <span>Entrega</span>
+            <strong>Mañana · 9:00 – 13:00</strong>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Cómo funciona -->
+    <section class="section" id="como-funciona">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">Cómo funciona</p>
+          <h2>Tu pedido en tres pasos</h2>
+        </header>
+        <ol class="steps">
+          <li>
+            <span class="steps__num">01</span>
+            <h3>Arma tu carrito</h3>
+            <p>Elige una canasta o los productos sueltos que necesites.</p>
+          </li>
+          <li>
+            <span class="steps__num">02</span>
+            <h3>Agenda la entrega</h3>
+            <p>Indica tu dirección, el día y el turno que más te acomode.</p>
+          </li>
+          <li>
+            <span class="steps__num">03</span>
+            <h3>Recibe en casa</h3>
+            <p>Te confirmamos el pedido y lo llevamos fresco hasta tu puerta.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Productos -->
+    <section class="section section--alt" id="productos">
+      <div class="container">
+        <header class="section__head section__head--row">
+          <div>
+            <p class="eyebrow">Productos</p>
+            <h2>Arma tu pedido</h2>
+          </div>
+          <div class="filters" role="group" aria-label="Filtrar productos">
+            <button type="button" class="chip is-active" data-filter="todo" aria-pressed="true">Todo</button>
+            <button type="button" class="chip" data-filter="canastas" aria-pressed="false">Canastas</button>
+            <button type="button" class="chip" data-filter="frutas" aria-pressed="false">Frutas</button>
+            <button type="button" class="chip" data-filter="verduras" aria-pressed="false">Verduras</button>
+          </div>
+        </header>
+        <div class="products" id="productGrid"></div>
+      </div>
+    </section>
+
+    <!-- Checkout -->
+    <section class="section" id="pedido">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">Finalizar compra</p>
+          <h2>Agenda tu entrega</h2>
+        </header>
+
+        <div class="checkout">
+          <form class="form" id="orderForm" novalidate>
+            <div class="form__grid">
+              <div class="field">
+                <label for="nombre">Nombre completo</label>
+                <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="telefono">Teléfono</label>
+                <input id="telefono" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required>
+              </div>
+
+              <div class="field field--full">
+                <label for="email">Email <span class="optional">(opcional, para enviarte la confirmación)</span></label>
+                <input id="email" name="email" type="email" autocomplete="email">
+              </div>
+
+              <div class="field field--full">
+                <label for="direccion">Dirección de entrega</label>
+                <input id="direccion" name="direccion" type="text" autocomplete="street-address" placeholder="Calle, número, depto. y sector" required>
+              </div>
+
+              <div class="field">
+                <label for="fecha">Fecha de entrega</label>
+                <input id="fecha" name="fecha" type="date" required>
+              </div>
+              <fieldset class="field">
+                <legend>Turno</legend>
+                <div class="segmented">
+                  <label><input type="radio" name="turno" value="Mañana (9:00 – 13:00)" checked><span>Mañana<small>9:00 – 13:00</small></span></label>
+                  <label><input type="radio" name="turno" value="Tarde (15:00 – 19:00)"><span>Tarde<small>15:00 – 19:00</small></span></label>
+                </div>
+              </fieldset>
+
+              <fieldset class="field field--full">
+                <legend>Forma de pago</legend>
+                <div class="segmented">
+                  <label><input type="radio" name="pago" value="Efectivo contra entrega" checked><span>Efectivo</span></label>
+                  <label><input type="radio" name="pago" value="Transferencia"><span>Transferencia</span></label>
+                </div>
+              </fieldset>
+
+              <div class="field field--full">
+                <label for="comentarios">Comentarios <span class="optional">(opcional)</span></label>
+                <textarea id="comentarios" name="comentarios" rows="3" placeholder="Ej.: plátanos no muy maduros, el timbre no funciona…"></textarea>
+              </div>
+            </div>
+
+            <p class="form__status" id="formStatus" role="alert" hidden></p>
+            <button type="submit" class="btn btn--primary btn--block btn--lg" id="submitBtn">Confirmar compra</button>
+            <p class="form__legal">Te contactaremos para confirmar el pedido. Pagas al recibir o por transferencia.</p>
+          </form>
+
+          <aside class="summary-card" aria-labelledby="summaryTitle">
+            <h3 id="summaryTitle">Tu pedido</h3>
+            <div id="summaryItems"></div>
+            <dl class="totals" id="summaryTotals"></dl>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#inicio" class="brand brand--light">
+        <svg class="brand__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h18l1-11-5 4-5-7-5 7-5-4z"/></svg>
+        <span class="brand__text">
+          <strong>Los reyes del reparto</strong>
+          <small>Frutas y Verduras</small>
+        </span>
+      </a>
+      <p>Lunes a sábado · 9:00 a 19:00</p>
+      <p class="footer__copy">© <span id="year"></span> Los reyes del reparto</p>
+    </div>
+  </footer>
+
+  <!-- Carrito lateral -->
+  <dialog class="drawer" id="cartDrawer" aria-labelledby="cartTitle">
+    <div class="drawer__head">
+      <h3 id="cartTitle">Tu carrito</h3>
+      <button type="button" class="icon-btn" id="cartClose" aria-label="Cerrar carrito">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="drawer__items" id="cartItems"></div>
+    <div class="drawer__foot">
+      <dl class="totals" id="cartTotals"></dl>
+      <a href="#pedido" class="btn btn--primary btn--block btn--lg" id="checkoutBtn">Continuar con el pedido</a>
+    </div>
+  </dialog>
+
+  <!-- Confirmación -->
+  <dialog class="modal" id="confirmModal" aria-labelledby="modalTitle">
+    <div class="modal__body">
+      <div class="modal__check" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+      </div>
+      <h3 id="modalTitle">¡Pedido recibido!</h3>
+      <p id="modalText">Te contactaremos para confirmar tu pedido.</p>
+      <p class="modal__order">N° de pedido <strong id="orderNumber"></strong></p>
+      <button type="button" class="btn btn--primary btn--block" id="closeModal">Listo</button>
+    </div>
+  </dialog>
+
+  <!-- Aviso al agregar -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
